@@ -1,0 +1,21 @@
+table is a collection of rows and columns 
+
+a box generate from row and columns it called cell.
+
+tags : 
+for create a table = <table>
+for create a row = <tr> 
+for give a data = <td>
+for set table heading = <th> 
+for give table title = <caption>
+for set table body = <tbody>
+for set table footer = <tfoot>
+for saparate section for table head = <thead>
+
+for set background color in columns 
+<colgroup>
+<col> 
+
+cellpadding = give a space between content and border.
+cellspacing = give s space between cells.
+rules = used to apply single line border. but after apply this cellspacing not effected.

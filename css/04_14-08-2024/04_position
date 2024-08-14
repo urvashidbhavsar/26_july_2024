@@ -1,0 +1,15 @@
+position means how to give a position on webpage.
+
+values : 
+static (default)
+fixed,
+sticky,
+relative,
+absolute
+
+list of property which is used with position,
+1. left 
+2. right 
+3. top 
+4. bottom 
+5. z-index

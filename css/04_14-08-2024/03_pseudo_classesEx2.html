@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            text-align: center;
+            /* border-collapse: separate; */
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 10px;
+        }
+
+        tr:nth-child(odd) {
+            background-color: cadetblue;
+        }
+
+        tr:nth-child(even) {
+            background-color: coral;
+        }
+
+        tr:first-child {
+            background-color: darkblue;
+            color: white;
+        }
+
+        tr:last-child {
+            background-color: red;
+            color: white;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        .box:nth-child(1) {
+            background-color: blanchedalmond;
+        }
+
+        .box:nth-child(2) {
+            background-color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th>Sr.No</th>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Team</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>1001</td>
+            <td>Pooja</td>
+            <td>Red</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>1002</td>
+            <td>Tanmay</td>
+            <td>Blue</td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td>1003</td>
+            <td>Dipak</td>
+            <td>Green</td>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td>1003</td>
+            <td>Dipak</td>
+            <td>Green</td>
+        </tr>
+    </table>
+
+    <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* pseudo classes are start with : sign */
+        .link1:link {
+            color: blue;
+        }
+
+        .link2:any-link {
+            color: blue;
+        }
+
+        .link3:active {
+            color: green;
+        }
+
+        .link4:visited {
+            color: magenta;
+        }
+
+        .link5:hover {
+            color: salmon;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 15px;
+            background: olivedrab;
+            color: white;
+            border: 1px solid olivedrab;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            color: olivedrab;
+            background-color: transparent;
+        }
+
+        button:active {
+            box-shadow: 0 0 5px black;
+        }
+
+        input {
+            border: 1px solid gray;
+        }
+
+        :focus-visible {
+            outline: none;
+        }
+
+        :focus {
+            box-shadow: 0 0 5px gray;
+        }
+
+        /* :focus-within {} */
+    </style>
+</head>
+
+<body>
+    <a href="#" class="link1">Click here</a>
+    <a href="#" class="link2">Click here</a>
+    <a href="#" class="link3">Click here</a>
+    <a href="#" class="link4">Click here</a>
+    <a href="#" class="link5">Click here</a>
+    <br><br>
+
+    <button>Click on me</button>
+    <br><br>
+
+    <input type="text" name="" id="">
+
+</body>
+
+</html>

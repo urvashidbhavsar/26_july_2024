@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .main {
+            background-image: url(https://live.staticflickr.com/4320/35242676104_3d9ba056bd_b.jpg);
+            background-position: center;
+            background-size: cover;
+            padding: 200px 100px;
+            /* filter: brightness(0.5); */
+            position: relative;
+            z-index: 1;
+        }
+
+        .main::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.583);
+            z-index: -1;
+        }
+
+        .herotext {
+            text-align: center;
+            /* background-color: rgba(0, 0, 0, 0.608); */
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 50px;
+            padding-bottom: 20px;
+            color: white;
+        }
+
+        p {
+            color: white;
+            padding-bottom: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            border: 2px solid transparent;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .btn1 {
+            background-color: #1079e2;
+            color: white;
+        }
+
+        .btn2 {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="herotext">
+            <h1>IT Developer</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat, nam sed nesciunt iste
+                officia autem expedita molestiae tempora maiores sint unde eveniet enim assumenda ab sit modi accusamus.
+                Reprehenderit.
+            </p>
+            <div>
+                <button class="btn1">See More</button>
+                <button class="btn2">Read More</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .setup {
+            height: 200px;
+            width: 200px;
+            margin: 180px auto;
+        }
+
+        .cube {
+            height: 200px;
+            width: 200px;
+            position: relative;
+            transform: translateZ(-100px);
+            perspective: 400px;
+            transform-style: preserve-3d;
+            perspective-origin: 140% 100%;
+        }
+
+        .slides {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            font-size: 40px;
+            display: grid;
+            place-content: center;
+        }
+
+        .front {
+            transform: rotate(0deg) translateZ(100px);
+            background-color: rgba(255, 23, 133, 0.7);
+        }
+
+        .back {
+            transform: rotate(0deg) translateZ(-100px);
+            background-color: rgba(23, 162, 255, 0.7);
+        }
+
+        .top {
+            transform: rotateX(-90deg) translateZ(-100px);
+            background-color: rgba(174, 136, 12, 0.7);
+        }
+
+        .bottom {
+            transform: rotateX(90deg) translateZ(-100px);
+            background-color: rgba(16, 190, 16, 0.7);
+        }
+
+        .left {
+            transform: rotateY(90deg) translateZ(-100px);
+            background-color: rgba(9, 30, 188, 0.7);
+        }
+
+        .right {
+            transform: rotateY(-90deg) translateZ(-100px);
+            background-color: rgba(67, 4, 30, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="setup">
+        <div class="cube">
+            <div class="slides front">Front</div>
+            <div class="slides back">Back</div>
+            <div class="slides top">Top</div>
+            <div class="slides bottom">Bottom</div>
+            <div class="slides left">Left</div>
+            <div class="slides right">Right</div>
+        </div>
+    </div>
+</body>
+
+</html>

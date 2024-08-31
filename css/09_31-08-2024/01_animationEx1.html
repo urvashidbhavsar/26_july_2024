@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .setup {
+            height: 250px;
+            width: 250px;
+            margin: 170px auto;
+        }
+
+        .flowerptn {
+            height: 250px;
+            width: 250px;
+            position: relative;
+            animation: circle 1.5s ease-in-out infinite alternate;
+        }
+
+        .centerdiv {
+            position: absolute;
+            top: 72px;
+            left: 72px;
+            height: 100px;
+            width: 100px;
+            background-color: orangered;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .circle {
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+            border-radius: 50%;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .lt-cir {
+            left: 30px;
+            top: 30px;
+        }
+
+        .rt-cir {
+            right: 30px;
+            top: 30px;
+        }
+
+        .lb-cir {
+            left: 30px;
+            bottom: 30px;
+        }
+
+        .rb-cir {
+            right: 30px;
+            bottom: 30px;
+        }
+
+        @keyframes circle {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="setup">
+        <div class="flowerptn">
+            <div class="centerdiv"></div>
+            <div class="lt-cir circle"></div>
+            <div class="rt-cir circle"></div>
+            <div class="lb-cir circle"></div>
+            <div class="rb-cir circle"></div>
+        </div>
+    </div>
+</body>
+
+</html>

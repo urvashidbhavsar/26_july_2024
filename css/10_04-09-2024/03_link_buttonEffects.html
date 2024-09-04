@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            padding: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            gap: 30px;
+            font-family: sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 40px;
+            color: blue;
+        }
+
+        a::after {
+            content: "";
+            height: 5px;
+            width: 100%;
+            background-color: red;
+            display: block;
+            transition: 0.5s ease;
+        }
+
+        .link1::after {
+            transform: scale(0);
+        }
+
+        .link1:hover::after {
+            transform: scale(1);
+        }
+
+        .link2::after {
+            transform: scaleY(0);
+        }
+
+        .link2:hover::after {
+            transform: scaleY(1);
+        }
+
+        .link3::after {
+            transform: scaleX(0);
+        }
+
+        .link3:hover::after {
+            transform: scaleX(1);
+        }
+
+        .link4::after {
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        .link4:hover::after {
+            transform: scaleX(1);
+        }
+
+        .btn {
+            padding: 15px 35px;
+            font-size: 30px;
+            background-color: white;
+            color: teal;
+            border: 2px solid teal;
+            cursor: pointer;
+            transition: 0.5s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: teal;
+            z-index: -1;
+            transform: scaleX(0);
+            transition: 0.5s ease;
+            transform-origin: right;
+        }
+
+        .btn:hover {
+            color: white;
+        }
+
+        .btn:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <a href="" class="link1">Click here</a>
+        </div>
+        <div>
+            <a href="" class="link2">Click here</a>
+        </div>
+        <div>
+            <a href="" class="link3">Click here</a>
+        </div>
+        <div>
+            <a href="" class="link4">Click here</a>
+        </div>
+        <div>
+            <button class="btn">Click Here</button>
+        </div>
+    </div>
+</body>
+
+</html>

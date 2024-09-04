@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .overlay {
+            width: 400px;
+            border: 1px solid black;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .overText {
+            background-color: rgba(0, 0, 0, 0.788);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: grid;
+            place-items: center;
+            height: 100%;
+            width: 100%;
+            letter-spacing: 3px;
+            transition: 0.5s ease all;
+            transform: scale(0);
+        }
+
+        .overlay:hover .overText {
+            transform: scale(1) rotate(360deg);
+        }
+
+        h3 {
+            transform: scale(0);
+            transition: 0.5s ease;
+        }
+
+        .overlay:hover h3 {
+            transform: scale(1);
+            transition-delay: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?cs=srgb&dl=pexels-morningtrain-18105.jpg&fm=jpg"
+            alt="">
+
+        <div class="overText">
+            <h3><a href="">View More</a></h3>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.adminPanel {
+  display: flex;
+  background: lightgray;
+}
+.adminPanel .sidebar {
+  width: 25%;
+  border: 1px solid black;
+}
+.adminPanel .sidebar .navbar {
+  margin: 20px;
+  background: white;
+  border-radius: 5px;
+}
+.adminPanel .sidebar .navbar .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+}
+.adminPanel .sidebar .navbar .logo h1 {
+  color: #e13434;
+}
+.adminPanel .sidebar .navbar .logo h1 span {
+  color: #460808;
+}
+.adminPanel .sidebar .navbar .logo div i {
+  color: #460808;
+  font-size: 20px;
+}
+.adminPanel .mainpage {
+  width: 75%;
+}/*# sourceMappingURL=style.css.map */

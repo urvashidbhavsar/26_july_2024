@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  border: 1px solid gray;
+  width: 400px;
+  margin: auto;
+}
+.card img {
+  max-width: 100%;
+}
+.card .text {
+  padding: 20px;
+}
+.card .text .title {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

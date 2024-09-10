@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// variable
+$width: 400px;
+$padd: 20px;
+
+// nesting
+.card {
+    border: 1px solid gray;
+    width: $width;
+    margin: auto;
+
+    img {
+        max-width: 100%;
+    }
+
+    .text {
+        padding: $padd;
+
+        .title {
+            text-align: center;
+        }
+    }
+}

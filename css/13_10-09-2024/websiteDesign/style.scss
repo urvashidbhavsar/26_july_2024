@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+// make variable for color
+$lightgray :lightgray;
+$white: white;
+$darkRed : #460808;
+$lightRed :#e13434;
+$space1 : 10px;
+$space2 : 20px;
+$space3 : 30px;
+$space4 : 40px;
+$space5 : 50px;
+$space6 : 60px;
+
+.adminPanel {
+    display: flex;
+    background: $lightgray;
+
+    .sidebar {
+        width: 25%;
+        border: 1px solid black;
+
+        .navbar {
+            margin: $space2;
+            background: $white;
+            border-radius: 5px;
+
+            .logo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: $space2;
+                border-bottom: 1px solid $lightgray;
+
+                h1 {
+                    color: $lightRed;
+
+                    span {
+                        color: $darkRed;
+                    }
+                }
+
+                div {
+                    i {
+                        color: $darkRed;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .mainpage {
+        width: 75%;
+    }
+}

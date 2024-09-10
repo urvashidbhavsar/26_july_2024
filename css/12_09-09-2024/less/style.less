@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// variable 
+@width: 400px;
+@gray: gray;
+
+// nesting
+.image {
+    box-shadow: 0 0 5px @gray;
+    width: @width;
+    margin: 40px auto;
+
+    img {
+        max-width: 100%;
+    }
+
+    .text {
+        padding: 20px;
+
+        h1 {
+            text-align: center;
+        }
+    }
+}

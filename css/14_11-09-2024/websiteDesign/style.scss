@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+// make variable for color
+$lightgray :lightgray;
+$white: white;
+$darkRed : #460808;
+$lightRed :#e13434;
+$space1 : 10px;
+$space2 : 20px;
+$space3 : 30px;
+$space4 : 40px;
+$space5 : 50px;
+$space6 : 60px;
+
+.adminPanel {
+    display: flex;
+    background: $lightgray;
+
+    .sidebar {
+        width: 25%;
+
+        @media (max-width:576px) {
+            display: none;
+        }
+
+        @media (min-width:576px) {
+            display: none;
+        }
+
+        @media (min-width:992px) {
+            display: block;
+        }
+
+        .navbar {
+            margin: $space2;
+            background: $white;
+            border-radius: 5px;
+            height: 550px;
+            overflow: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: rgb(226, 226, 226) transparent;
+
+            .logo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: $space2;
+                border-bottom: 1px solid $lightgray;
+
+                h1 {
+                    color: $lightRed;
+
+                    span {
+                        color: $darkRed;
+                    }
+                }
+
+                div {
+                    i {
+                        color: $darkRed;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .nav {
+                padding: $space2;
+
+                h4 {
+                    color: $darkRed;
+                    padding: $space1 0;
+                }
+
+                ul {
+                    list-style-type: none;
+                    line-height: 2;
+
+                    li {
+                        i {
+                            padding-right: $space2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mainpage {
+        width: 75%;
+        padding: $space2 0;
+
+        @media (max-width:576px) {
+            width: 100%;
+            margin: 0 $space1;
+        }
+
+        @media (min-width:576px) {
+            width: 100%;
+            margin: 0 $space1;
+        }
+
+        @media (min-width:992px) {
+            width: 75%;
+            margin: unset;
+        }
+
+        .navbar {
+            background-color: $darkRed;
+            padding: $space1;
+
+            @media (min-width:992px) {
+                display: none;
+            }
+
+            .logo {
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                i {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}

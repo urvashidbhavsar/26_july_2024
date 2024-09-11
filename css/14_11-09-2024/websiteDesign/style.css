@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.adminPanel {
+  display: flex;
+  background: lightgray;
+}
+.adminPanel .sidebar {
+  width: 25%;
+}
+@media (max-width: 576px) {
+  .adminPanel .sidebar {
+    display: none;
+  }
+}
+@media (min-width: 576px) {
+  .adminPanel .sidebar {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .adminPanel .sidebar {
+    display: block;
+  }
+}
+.adminPanel .sidebar .navbar {
+  margin: 20px;
+  background: white;
+  border-radius: 5px;
+  height: 550px;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(226, 226, 226) transparent;
+}
+.adminPanel .sidebar .navbar .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+}
+.adminPanel .sidebar .navbar .logo h1 {
+  color: #e13434;
+}
+.adminPanel .sidebar .navbar .logo h1 span {
+  color: #460808;
+}
+.adminPanel .sidebar .navbar .logo div i {
+  color: #460808;
+  font-size: 20px;
+}
+.adminPanel .sidebar .navbar .nav {
+  padding: 20px;
+}
+.adminPanel .sidebar .navbar .nav h4 {
+  color: #460808;
+  padding: 10px 0;
+}
+.adminPanel .sidebar .navbar .nav ul {
+  list-style-type: none;
+  line-height: 2;
+}
+.adminPanel .sidebar .navbar .nav ul li i {
+  padding-right: 20px;
+}
+.adminPanel .mainpage {
+  width: 75%;
+  padding: 20px 0;
+}
+@media (max-width: 576px) {
+  .adminPanel .mainpage {
+    width: 100%;
+    margin: 0 10px;
+  }
+}
+@media (min-width: 576px) {
+  .adminPanel .mainpage {
+    width: 100%;
+    margin: 0 10px;
+  }
+}
+@media (min-width: 992px) {
+  .adminPanel .mainpage {
+    width: 75%;
+    margin: unset;
+  }
+}
+.adminPanel .mainpage .navbar {
+  background-color: #460808;
+  padding: 10px;
+}
+@media (min-width: 992px) {
+  .adminPanel .mainpage .navbar {
+    display: none;
+  }
+}
+.adminPanel .mainpage .navbar .logo {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.adminPanel .mainpage .navbar .logo i {
+  font-size: 25px;
+}/*# sourceMappingURL=style.css.map */

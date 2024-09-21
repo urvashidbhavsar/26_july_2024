@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        svg {
+            height: 700px;
+            width: 100%;
+        }
+
+        rect {
+            fill: darkcyan;
+            stroke-width: 10px;
+            stroke: red;
+            stroke-dasharray: 31px;
+            stroke-dashoffset: 19px;
+            stroke-linecap: square;
+            stroke-opacity: 0.5;
+        }
+
+        circle {
+            fill: rgb(203, 201, 201);
+        }
+
+        line {
+            stroke-width: 4px;
+            stroke: black;
+        }
+
+        text {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <svg>
+        <rect x="10" y="10" height="200px" width="200px" rx="10" ry="10"></rect>
+
+        <circle cx="200" cy="200" r="100"></circle>
+
+        <line x1="350" y1="200" x2="650" y2="200"></line>
+
+        <text x="400" y="500">Hello world</text>
+
+        <polygon points=""></polygon>
+
+        <lineargradient></lineargradient>
+        <radialgradient></radialgradient>
+    </svg>
+</body>
+
+</html>

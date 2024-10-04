@@ -1,0 +1,18 @@
+1. label => form-label
+
+2. input type - text, email, password, color, date, datetime-local, week, month, number, search, file etc.. => form-control
+
+3. input type - radio and checkbox
+parent => form-check(vertically), form-check-inline (horizontally)
+input => form-check-input 
+for input label => form-check-label
+
+4. for dropdown => form-select 
+
+5. for color => form-control, form-control-color 
+
+6. for range => form-range
+
+7. for input group => 
+parent - input-group class
+label, button, span => input-group-text

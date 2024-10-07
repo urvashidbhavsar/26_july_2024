@@ -1,0 +1,63 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 111;
+}
+
+.navbar-toggler {
+    background-color: white !important;
+    border-radius: 0;
+}
+
+.img1 {
+    background: url(https://designnotes.blog.gov.uk/wp-content/uploads/sites/53/2020/06/Portfolio-Desk.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.img2 {
+    background: url(https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2021/08/how-to-make-an-online-portfolio.webp) no-repeat center;
+    background-size: cover;
+}
+
+.img3 {
+    background: url(https://miro.medium.com/v2/resize:fit:730/0*SEdGTbPR8hfkTWR2.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.carousel-item {
+    position: relative;
+    z-index: 1;
+    padding: 220px 0;
+}
+
+@media (max-width:576px) {
+    .carousel-item {
+        padding: 100px 0;
+    }
+}
+
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.733);
+    z-index: -1;
+}
+
+.card .cardimg {
+    width: 100%;
+    overflow: hidden;
+}
+
+.card img {
+    transition: 1s ease;
+    vertical-align: middle;
+}
+
+.card:hover img {
+    scale: 1.1;
+}

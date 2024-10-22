@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // print max number from given 2 numbers
+        var a = 12, b = 12;
+        document.write(`a is : ${a} <br> b is : ${b} 
+        <br> ----- ans ---- <br>`);
+
+        if (a > b) {
+            document.write(`${a} is max`)
+        } else if (b > a) {
+            document.write(`${b} is max`)
+        } else {
+            document.write(`both are same`)
+        }
+
+        document.write("<br>--------------------------------<br>")
+        var x = 52, y = 52, z = 100;
+        document.write(`x is : ${x} <br> y is : ${y} <br> z is : ${z} 
+        <br> ----- ans ---- <br>`);
+
+        // nested if else
+        // if (x > y) {
+        //     if (x > z) {
+        //         document.write(`${x} is max`)
+        //     } else {
+        //         document.write(`${z} is max`)
+        //     }
+        // } else if (y > x) {
+        //     if (y > z) {
+        //         document.write(`${y} is max`)
+        //     } else {
+        //         document.write(`${z} is max`)
+        //     }
+        // } else {
+        //     document.write(`all are same`)
+        // }
+
+        // logical
+        if (x > y && x > z) {
+            document.write(`${x} is max`)
+        } else if (y > x && y > z) {
+            document.write(`${y} is max`)
+        } else if (z > x && z > y) {
+            document.write(`${z} is max`)
+        } else {
+            document.write(`all are same`)
+        }
+    </script>
+</body>
+
+</html>

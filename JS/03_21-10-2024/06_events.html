@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 20px;
+            padding: 30px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- onmousedown = when press down mouse button  -->
+    <!-- onmouseenter = when user enter on parent element   -->
+    <!-- onmouseleave = when user leave from parent element   -->
+    <!-- onmousemove = when user move the cursor  -->
+    <!-- onmouseout = when user out from parent as well as child element -->
+    <!-- onmouseover = when user enter on parent as well as child element -->
+    <!-- onmouseup = when press & release mouse button  -->
+    <!-- onmousewheel = when scroll using mouse wheel  -->
+    <!-- oncontextmenu = for mouse right click -->
+
+    <!-- onkeydown => WHEN USER PRESS DOWN ANY KEY  -->
+    <!-- onkeypress => when user press any key exclude function and other special keys -->
+    <!-- onkeyup => WHEN USER releasre any key  -->
+
+    <div class="parent"> Parent
+        <div class="child">Child</div>
+    </div>
+    <input type="text" name="" id="" onkeyup="show()">
+
+    <script>
+        function show() {
+            alert("event applied")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- print pattern program -->
+    <!-- 
+              *
+              * * 
+              * * * 
+              * * * * 
+              * * * * *
+    -->
+    <script>
+        // debugger
+        var n = 5, charset = 65
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j <= i; j++) {
+                document.write("* ")
+                // document.write(i)
+                // document.write(j)
+                // var str = String.fromCharCode(charset)
+                // document.write(str + " ")
+                // charset++
+            }
+            document.write("<br>")
+        }
+        for (let i = n; i >= 0; i--) {
+            for (let j = 0; j <= i; j++) {
+                document.write("* ")
+            }
+            document.write("<br>")
+        }
+    </script>
+
+</body>
+
+</html>

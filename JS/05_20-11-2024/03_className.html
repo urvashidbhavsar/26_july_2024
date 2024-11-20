@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* create a class for implement class using js */
+        .title {
+            font-size: 50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: darkcyan;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="addCss()">set css</button>
+    <h1 id="heading">Hello World</h1>
+
+    <script>
+        function addCss() {
+            let head = document.getElementById("heading");
+            if (head.className == "") {
+                head.className = "title"
+            } else {
+                head.className = ""
+            }
+        }
+    </script>
+</body>
+
+</html>

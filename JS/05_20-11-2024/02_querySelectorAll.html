@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+    </div>
+
+    <script>
+        // as per class selection
+        var mytext = document.querySelectorAll(".text");
+        for (let i = 0; i < mytext.length; i++) {
+            mytext[i].innerHTML = "Class Selection done"
+        }
+    </script>
+
+    <h1>Hello</h1>
+    <h2>Hello</h2>
+    <p>Hello</p>
+
+    <script>
+        // as per group selection
+        var text = document.querySelectorAll("h1,h2,p")
+        for (let i = 0; i < text.length; i++) {
+            text[i].style.color = "blue"
+        }
+    </script>
+
+    <div class="parent"> parent
+        <div class="child">child</div>
+        <div class="child">child</div>
+    </div>
+
+    <script>
+        var sel = document.querySelectorAll(".parent .child")
+        sel[0].style.color = "red"
+        sel[1].style.color = "red"
+    </script>
+</body>
+
+</html>

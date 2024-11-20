@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: 150px;
+            width: 150px;
+            border: 1px solid black;
+        }
+
+        .box1 {
+            background-color: darkblue;
+            box-shadow: 0 0 5px 0 darkblue;
+        }
+
+        .box2 {
+            background-color: saddlebrown;
+            box-shadow: 0 0 5px 0 saddlebrown
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="addcss()">Add</button>
+    <button onclick="removeCss()">Remove</button>
+    <button onclick="togglecss()">Toggle</button>
+    <button onclick="check()">Contains</button>
+
+    <hr>
+    <div id="div1" class="mydiv"></div>
+    <div id="div2" class="mydiv"></div>
+
+    <script>
+        function addcss() {
+            let div = document.getElementById("div1")
+            div.classList.add("box1")
+        }
+        function removeCss() {
+            let div = document.getElementById("div1")
+            div.classList.remove("box1")
+        }
+        function togglecss() {
+            let div = document.getElementById("div2")
+            div.classList.toggle("box2")
+        }
+        function check() {
+            let div = document.getElementById("div2")
+            if (div.classList.contains("box2")) {
+                alert("class exist")
+            } else {
+                alert("class not exist")
+            }
+        }
+    </script>
+</body>
+
+</html>

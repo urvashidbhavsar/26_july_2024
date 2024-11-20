@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            box-shadow: 0 0 5px rgb(186, 186, 186);
+            width: fit-content;
+            padding: 30px;
+            margin: 200px auto;
+            text-align: center;
+        }
+
+        .row {
+            padding: 7px 0;
+        }
+
+        input {
+            height: 25px;
+            width: 250px;
+            padding: 5px;
+            font-size: 17px;
+            border: 1px solid gray;
+        }
+
+        :focus-visible {
+            outline: none;
+        }
+
+        #msg {
+            color: red;
+        }
+
+        .error {
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <div class="row">
+            <input type="text" name="" id="fname" placeholder="Enter name" onchange="return checkvalidate()">
+            <div id="msg"></div>
+        </div>
+        <div class="row">
+            <!-- <button onclick="return checkvalidate()">Display</button> -->
+        </div>
+        <div>
+            <p id="data"></p>
+        </div>
+    </form>
+
+    <script>
+        function checkvalidate() {
+            let f = document.getElementById("fname")
+            if (f.value == "") {
+                // alert("Enter value")
+                document.getElementById("msg").innerHTML = "Enter   Value"
+                f.classList.add("error")
+            } else {
+                document.getElementById("data").innerHTML = f.value
+                document.getElementById("msg").innerHTML = null
+                document.getElementById("fname").value = ""
+                f.classList.remove("error")
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

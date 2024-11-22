@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 30px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <p id="p7"></p>
+
+
+    <script>
+        var dt = new Date();
+
+        document.getElementById("p1").innerHTML = dt;
+        document.getElementById("p2").innerHTML = dt.getDate() + "-" + (dt.getMonth() + 1) + "-" + dt.getFullYear();
+        document.getElementById("p3").innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+        document.getElementById("p4").innerHTML = dt.getDay()
+
+        document.getElementById("p5").innerHTML = dt.toLocaleDateString()
+        document.getElementById("p6").innerHTML = dt.toLocaleTimeString()
+        document.getElementById("p7").innerHTML = dt.toDateString()
+
+    </script>
+</body>
+
+</html>

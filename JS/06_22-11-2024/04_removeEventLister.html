@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">click</button>
+    <script>
+        let b = document.getElementById("btn")
+        function showmsg() {
+            alert("Welcome")
+
+            b.removeEventListener("click", showmsg)
+            b.setAttribute("disabled", "true")
+        }
+        b.addEventListener("click", showmsg)
+    </script>
+</body>
+
+</html>

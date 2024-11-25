@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="text" onchange="return changeString()" placeholder="Enter value" oninput="userinp()">
+
+    <p id="res"></p>
+
+    <script>
+        function changeString() {
+            let val = new String(document.getElementById("text").value);
+            document.getElementById("res").innerHTML = val.trim()
+        }
+        function userinp() {
+            let val = document.getElementById("text");
+            val.value = val.value.toUpperCase()
+        }
+    </script>
+</body>
+
+</html>

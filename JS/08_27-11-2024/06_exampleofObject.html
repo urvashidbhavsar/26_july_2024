@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .productCard {
+            padding: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid black;
+        }
+
+        .card img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .card .cardData {
+            padding: 20px;
+        }
+
+        .card .title {
+            font-size: 22px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="productCard"></div>
+
+    <script>
+        var product = [
+            {
+                img: "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,dpr-2/static/img/product/364161/swiss-beauty-hydra-eye-serum-patch-alovera-60-pcs-19_1_display_1712129985_f7db42d7.jpg",
+                title: "Swiss Beauty Hydra Clear Eye Serum",
+                newprice: 279,
+                oldprice: 349,
+            },
+            {
+                img: "https://media6.ppl-media.com//tr:h-750,w-750,c-at_max,dpr-2/static/img/product/338934/good-vibes-vitamin-c-anti-blemish-glow-under-eye-gel-15-ml_1_display_1704711274_f4bfb5c6.jpg",
+                title: "Good Vibes Vitamin C Under Eye Gel",
+                newprice: 188,
+                oldprice: 375,
+            },
+            {
+                img: "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,dpr-2/static/img/product/374028/dermdoc-1-percentagevitamin-and-0-1-percentagegluthathione-bright-fix-tinted-under-eye-tone-correcting-creme_1_display_1728881014_bd9fce52.jpg",
+                title: "Dermdoc by Purplle Eye Cream",
+                newprice: 288,
+                oldprice: 385,
+            },
+            {
+                img: "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,dpr-2/static/img/product/327843/mcaffeine-coffee-under-eye-cream-with-eye-roller-reduces-dark-circles-puffiness-and-fine-lines-with-vitamin-e-and-white-water-lily-natural-aroma-15-ml_1_display_1728370752_bf766293.jpg",
+                title: "mCaffiene coffee under eye cream",
+                newprice: 249,
+                oldprice: 349,
+            },
+        ]
+
+        let prod = document.querySelector(".productCard");
+        product.forEach(p => {
+            prod.innerHTML += `
+                <div class="card">
+                    <img src="${p.img}" alt="">
+
+                    <div class="cardData">
+                        <div class="title">${p.title}</div>
+                        <div class="price">&#8377;${p.newprice} <s>&#8377;${p.oldprice}</s></div>
+                    </div>
+                </div>`
+        }) 
+    </script>
+</body>
+
+</html>

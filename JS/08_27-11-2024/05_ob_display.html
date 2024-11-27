@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var items = {
+            brands: "Cello",
+            price: 600,
+            categories: "Pen",
+            quantity: 10
+        }
+
+        // use for in loop of fetch single object value 
+        for (const i in items) {
+            if (Object.prototype.hasOwnProperty.call(items, i)) {
+                console.log(i + "=>" + items[i]);
+            }
+        }
+    </script>
+</body>
+
+</html>

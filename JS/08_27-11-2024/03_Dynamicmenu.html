@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            background-color: lightblue;
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        li {
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul id="menulist"></ul>
+    </div>
+
+    <script>
+        var menu = ["Home", "About", "Services", "Blog", "Contact"]
+        let list = document.getElementById("menulist");
+        menu.forEach(m => {
+            console.log(m);
+            list.innerHTML += `
+            <li><a href="">${m}</a></li> `
+        })
+    </script>
+</body>
+
+</html>

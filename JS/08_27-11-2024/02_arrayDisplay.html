@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var fruits = ["Apple", "Mango", "Bananas", "Grapes", "Kiwi"]
+
+        // print array value as a single
+        console.log(fruits[0]);
+        console.log(fruits[2]);
+        console.log(fruits[3]);
+        console.log("==============");
+
+        fruits.push("Watermalon", "Coconut")
+        console.log(fruits[5]);
+        console.log(fruits[6]);
+
+        console.log("==============");
+        fruits.pop();
+        console.log(fruits[6]);
+
+        // use loop for fetch array value
+        console.log("====== for of ========");
+        // here f is argument / parameter
+        for (let f of fruits) {
+            console.log(f);
+        }
+
+        console.log("====== for ========");
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(`${i + 1} => ${fruits[i]}`);
+        }
+
+        console.log("====== foreach method ========");
+        // here e is argument
+        // fruits.forEach(e => {
+        //     console.log(e);
+        // })
+        // if want key also set as callback
+        fruits.forEach((e, key) => {
+            console.log(key + "=>" + e);
+        })
+    </script>
+</body>
+
+</html>

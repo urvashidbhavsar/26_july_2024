@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.form {
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+input[type="text"],
+[type="email"] {
+    height: 25px;
+    width: 90%;
+    padding: 5px 15px;
+    font-size: 17px;
+    border: 1px solid gray;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+.row {
+    padding: 5px 0;
+}
+
+.err {
+    border-color: red !important;
+}
+
+.errmsg {
+    color: red;
+}

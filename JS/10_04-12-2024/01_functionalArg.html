@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .msg {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <div style="padding: 5px;">
+            <input type="text" name="" id="first" placeholder="firstname"
+                onkeyup="return checknamepttern('first','msg1')">
+            <span class="msg" id="msg1"></span>
+        </div>
+        <div style="padding: 5px;">
+            <input type="text" name="" id="middle" placeholder="middlename"
+                onkeyup="return checknamepttern('middle','msg2')">
+            <span class="msg" id="msg2"></span>
+        </div>
+        <div style="padding: 5px;">
+            <input type="text" name="" id="last" placeholder="lastname" onkeyup="return checknamepttern('last','msg3')">
+            <span class="msg" id="msg3"></span>
+        </div>
+    </form>
+
+    <script>
+        // keyboard event
+        function checknamepttern(input, msg) {
+            let inp = document.getElementById(input)
+            let ptn = /^[a-zA-Z]*$/;
+            if (!ptn.test(inp.value)) {
+                document.getElementById(msg).innerHTML = "Invalid Value!!!"
+            } else if (inp.value.length < 6) {
+                document.getElementById(msg).innerHTML = "Enter atleast 6 character"
+            } else {
+                document.getElementById(msg).innerHTML = null
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

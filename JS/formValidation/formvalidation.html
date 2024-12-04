@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <form action="#">
+            <div class="row">
+                <input type="text" name="" id="uname" onkeyup="return checknamepttern()" maxlength="30"
+                    oninput="notAllowed()" placeholder="Enter name" class="allow">
+                <div class="errmsg" id="msg1"></div>
+            </div>
+            <div class="row">
+                <input type="email" name="" id="email" onkeyup="return EmailValidate()" placeholder="Enter Email">
+                <div class="errmsg" id="msg2"></div>
+            </div>
+            <div class="row">
+                <input type="text" name="" id="mobile" onkeyup="return checkNumber()" placeholder="Enter Mobile No"
+                    maxlength="10" oninput="NumnotAllowed()">
+                <div class="errmsg" id="msg3"></div>
+            </div>
+            <div class="row">
+                <input type="password" name="" id="pass" placeholder="Enter Password" onkeyup="return passwordptn()">
+                <div class="errmsg" id="msg4"></div>
+            </div>
+            <div class="row">
+                <input type="password" name="" id="cpass" placeholder="Re-Enter Password"
+                    onkeyup="return confirmpassword()">
+                <div class="errmsg" id="msg5"></div>
+            </div>
+            <div class="row">
+                <input type="radio" name="gen" id="male"> Male
+                <input type="radio" name="gen" id="female"> Female
+                <div class="errmsg" id="msg6"></div>
+            </div>
+            <div class="row">
+                <select name="" id="city">
+                    <option value="-1">---select City---</option>
+                    <option value="">Surat</option>
+                </select>
+                <div class="errmsg" id="msg7"></div>
+            </div>
+            <div class="row">
+                <input type="file" name="" id="file" accept=".html">
+                <div class="errmsg" id="msg8"></div>
+            </div>
+            <div class="row">
+                <button onclick="return checkValidations()" type="submit">Submit</button>
+            </div>
+            <div class="row">
+                <input type="checkbox" onclick="showpass()"> Show Password
+            </div>
+        </form>
+    </div>
+    <script src="validation.js"></script>
+</body>
+
+</html>

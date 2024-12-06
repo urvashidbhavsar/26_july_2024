@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .slider {
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            animation: fade 1s ease;
+        }
+
+        .controls {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            top: 225px;
+        }
+
+        button {
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            border: none;
+            opacity: 0.5;
+            font-size: 30px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            opacity: 1;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slide">
+            <img src="https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?cs=srgb&dl=pexels-veeterzy-39811.jpg&fm=jpg"
+                alt="">
+        </div>
+        <div class="slide">
+            <img src="https://images8.alphacoders.com/133/1336966.jpeg" alt="">
+        </div>
+        <div class="slide">
+            <img src="https://as1.ftcdn.net/v2/jpg/05/71/06/76/1000_F_571067620_JS5T5TkDtu3gf8Wqm78KoJRF1vobPvo6.jpg"
+                alt="">
+        </div>
+        <div class="slide">
+            <img src="https://img.lovepik.com/photo/48013/0576.jpg_wh860.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="https://w0.peakpx.com/wallpaper/979/98/HD-wallpaper-birth-of-planet-planets-circle-orange-high-definition-space-rockets-clouds-nice-fantasy-multicolor-colored-beauty-forests-reflection-rivers-art-birds-black-sky-abstract-spatial.jpg"
+                alt="">
+        </div>
+
+        <div class="controls">
+            <button class="prev" onclick="changeslide(-1)">&lt;</button>
+            <button class="next" onclick="changeslide(1)">&gt;</button>
+        </div>
+    </div>
+
+    <script>
+        let index = 0;
+        slideshow(index)
+        function changeslide(x) {
+            slideshow(index += x)
+        }
+        setInterval(() => {
+            changeslide(1)
+        }, 5000)
+        function slideshow(n) {
+            let slide = document.getElementsByClassName("slide")
+
+            if (n < 0) {
+                index = slide.length - 1
+            }
+            if (n == slide.length) {
+                index = 0
+            }
+            for (const img of slide) {
+                img.style.display = "none"
+            }
+            slide[index].style.display = "block"
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let per = {
+            fname: "abc",
+            lname: "xyz",
+            display: function () {
+                return this.fname + " " + this.lname
+                // console.log(this.fname + " " + this.lname)
+            }
+        }
+        let per2 = {
+            fname: "ABC",
+            lname: "XYZ",
+        }
+        let dis = per.display.bind(per2)
+        // console.log(per.display.bind(per2));
+        console.log(dis());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var myarr = [1, 2, 3]
+        // console.log(myarr);
+
+        function employee(empname, sal) {
+            this.empname = empname
+            this.sal = sal
+        }
+
+        employee.prototype.empData = function () {
+            return this.empname + " " + this.sal
+        }
+
+        var e1 = new employee("Abc", 12999)
+        var e2 = new employee("Xyz", 56666)
+        console.log(e1.empData(), e2.empData());
+
+    </script>
+</body>
+
+</html>

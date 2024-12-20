@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //   this function hide details
+        function Student() {
+            if (new.target === Student) {
+                throw new Error("You can't create an instance of an abstract class");
+            }
+            this.stdname = "Rohit"
+        }
+        Student.prototype.Data = function () {
+            return this.stdname
+        }
+        // access student class using this function
+        function Sdetails() {
+            Student.call(this)
+            this.stand = 11;
+        }
+        Sdetails.prototype = Object.create(Student.prototype)
+        Sdetails.prototype.constructor = Sdetails;
+        var std = new Sdetails()
+        console.log(std.stand);
+        console.log(std.stdname);
+        console.log(std.Data());
+    </script>
+</body>
+
+</html>

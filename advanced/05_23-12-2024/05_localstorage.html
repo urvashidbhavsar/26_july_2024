@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="addItems()">Add</button>
+    <button onclick="getvalues()">Get</button>
+    <button onclick="removeAll()">remove</button>
+    <button onclick="totalData()">Total</button>
+
+    <p>Get data : <span id="get1"></span></p>
+    <p>Total data : <span id="get2"></span></p>
+
+    <script>
+        function addItems() {
+            // localStorage.setItem("1", "Mobile")
+            localStorage.setItem("2", "TV")
+        }
+        function getvalues() {
+            document.getElementById("get1").innerHTML = localStorage.getItem("1")
+        }
+        function removeAll() {
+            localStorage.removeItem("1")
+        }
+        function totalData() {
+            document.getElementById("get2").innerHTML = localStorage.length
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <input type="text" name="" id="username">
+        <button onclick="return addData()">Add</button>
+    </form>
+
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Delete</td>
+        </tr>
+        <tbody id="data"></tbody>
+    </table>
+
+    <script>
+        window.load = getData;
+        function addData() {
+            const user = `user_${Date.now()}`
+            let uname = document.getElementById("username").value.trim();
+            // const uname = {inp1, inp2, inp3};
+            localStorage.setItem(user, JSON.stringify(uname))
+            document.getElementById("username").value = ""
+            getData();
+        }
+        getData();
+        function getData() {
+            let data = document.getElementById("data");
+            data.innerHTML = ""
+
+            for (let i = 0; i < localStorage.length; i++) {
+                let getkey = localStorage.key(i);
+                if (getkey.startsWith("user_")) {
+                    let uname = JSON.parse(localStorage.getItem(getkey))
+                    data.innerHTML += `
+                        <tr>
+                            <td>${getkey}</td>
+                            <td>${uname}</td>
+                            <td>
+                                 <button onclick="DeleteData('${getkey}')">Delete</button>
+                            </td>
+                        </tr>
+                    `
+                }
+
+            }
+        }
+
+        function DeleteData(del) {
+            localStorage.removeItem(del)
+            getData();
+        }
+    </script>
+</body>
+
+</html>

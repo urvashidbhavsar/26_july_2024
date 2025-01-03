@@ -1,0 +1,16 @@
+pre-defined functions
+
+syntax : 
+$(document).ready(function){
+    $(selector).eventMethod(function(){
+        $(selector).methods()
+    })
+}
+=======================
+
+$(function){
+    $(selector).eventMethod(function () {
+        $(selector).methods()
+    })
+}
+

@@ -8,8 +8,9 @@
 </head>
 
 <body>
-    <form action="#">
-        <input type="text" name="" id="username">
+    <form action="#" style="padding: 20px;">
+        <input type="text" name="" id="username" placeholder="Username"> <br> <br>
+        <input type="text" name="" id="salary" placeholder="Salary"> <br> <br>
         <button onclick="return addData()">Add</button>
     </form>
 
@@ -17,19 +18,23 @@
         <tr>
             <td>ID</td>
             <td>Name</td>
+            <td>Salary</td>
             <td>Delete</td>
         </tr>
         <tbody id="data"></tbody>
     </table>
 
     <script>
-        window.load = getData;
         function addData() {
             const user = `user_${Date.now()}`
             let uname = document.getElementById("username").value.trim();
-            // const uname = {inp1, inp2, inp3};
-            localStorage.setItem(user, JSON.stringify(uname))
+            let salary = document.getElementById("salary").value.trim();
+
+            const userdetails = { uname, salary };
+
+            localStorage.setItem(user, JSON.stringify(userdetails))
             document.getElementById("username").value = ""
+            document.getElementById("salary").value = ""
             getData();
         }
         getData();
@@ -40,11 +45,12 @@
             for (let i = 0; i < localStorage.length; i++) {
                 let getkey = localStorage.key(i);
                 if (getkey.startsWith("user_")) {
-                    let uname = JSON.parse(localStorage.getItem(getkey))
+                    let userdetails = JSON.parse(localStorage.getItem(getkey))
                     data.innerHTML += `
                         <tr>
                             <td>${getkey}</td>
-                            <td>${uname}</td>
+                            <td>${userdetails.uname}</td>
+                            <td>${userdetails.salary}</td>
                             <td>
                                  <button onclick="DeleteData('${getkey}')">Delete</button>
                             </td>

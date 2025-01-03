@@ -14,3 +14,6 @@ $(function){
     })
 }
 
+ajax means load any external file 
+ajax = asynchronious javascript and xml 
+load, ajax

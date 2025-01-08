@@ -1,0 +1,13 @@
+.mydiv {
+    width: 300px;
+    border: 1px dashed saddlebrown;
+    padding: 20px;
+    margin: 20px;
+}
+
+.mydiv1 {
+    width: 300px;
+    border: 1px dashed red;
+    padding: 20px;
+    margin: 20px;
+}

@@ -8,6 +8,10 @@ import Imagecall from './Imagecall';
 import Message from './Message';
 import Navbar from './Navbar/Navbar';
 import Outerfunction from './Outerfunction';
+import Gallery from './Props_example/ImageGallery/Gallery';
+import Props_ex1 from './Props_example/Props_ex1';
+import Student from './Props_example/Student/Student';
+import Employee from './Props_example/employee/Employee';
 import ClassExample from './component/ClassExample';
 import Functionalex from './component/Functionalex';
 
@@ -26,8 +30,12 @@ function App() {
       {/* <Expressionex /> */}
       {/* <Message></Message> */}
       {/* <h1>Hello World</h1> */}
-      <Navbar />
-      <Imagecall />
+      {/* <Navbar /> */}
+      {/* <Imagecall /> */}
+      {/* <Props_ex1 /> */}
+      {/* <Employee />  */}
+      {/* <Student /> */}
+      <Gallery />
     </>
   );
 }

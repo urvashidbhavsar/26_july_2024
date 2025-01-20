@@ -3,6 +3,7 @@ import External from './ApplyCss/External';
 import Inline from './ApplyCss/Inline';
 import Internal from './ApplyCss/Internal';
 import UsingModule from './ApplyCss/UsingModule';
+import Eventex from './Event/Eventex';
 import Expressionex from './Expression/Expressionex';
 import Imagecall from './Imagecall';
 import Message from './Message';
@@ -14,6 +15,8 @@ import Student from './Props_example/Student/Student';
 import Employee from './Props_example/employee/Employee';
 import ClassExample from './component/ClassExample';
 import Functionalex from './component/Functionalex';
+import Icon from './fontawesome/Icon';
+import Example from './proptype/Example';
 
 function App() {
   return (
@@ -35,7 +38,10 @@ function App() {
       {/* <Props_ex1 /> */}
       {/* <Employee />  */}
       {/* <Student /> */}
-      <Gallery />
+      {/* <Gallery /> */}
+      {/* <Example /> */}
+      <Icon />
+      <Eventex />
     </>
   );
 }

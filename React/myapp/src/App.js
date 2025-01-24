@@ -7,16 +7,22 @@ import Eventex from './Event/Eventex';
 import Expressionex from './Expression/Expressionex';
 import Imagecall from './Imagecall';
 import Message from './Message';
+import Simpleex from './Methodsex/Simpleex';
 import Navbar from './Navbar/Navbar';
 import Outerfunction from './Outerfunction';
 import Gallery from './Props_example/ImageGallery/Gallery';
 import Props_ex1 from './Props_example/Props_ex1';
 import Student from './Props_example/Student/Student';
-import Employee from './Props_example/employee/Employee';
+// import Employee from './Props_example/employee/Employee';
 import ClassExample from './component/ClassExample';
 import Functionalex from './component/Functionalex';
+import Conditionex from './conditional/Conditionex';
 import Icon from './fontawesome/Icon';
-import Example from './proptype/Example';
+import Counting from './state/Counting';
+import State_example from './state/State_example';
+import Employee from './Methodsex/Employee';
+import Menulist from './Methodsex/Usingprops/Menulist';
+import Account from './Methodsex/Usingprops/Account';
 
 function App() {
   return (
@@ -40,8 +46,15 @@ function App() {
       {/* <Student /> */}
       {/* <Gallery /> */}
       {/* <Example /> */}
-      <Icon />
-      <Eventex />
+      {/* <Icon /> */}
+      {/* <Eventex /> */}
+      {/* <State_example /> */}
+      {/* <Counting /> */}
+      {/* <Conditionex /> */}
+      {/* <Simpleex /> */}
+      {/* <Employee /> */}
+      <Menulist />
+      <Account />
     </>
   );
 }

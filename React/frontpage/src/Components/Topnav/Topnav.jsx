@@ -3,6 +3,7 @@ import '../../App.css'
 import Imgsetup from '../Imgsetup'
 import Iconsetup from '../Iconsetup'
 import List from '../List'
+import Middlenav from './Middlenav'
 
 const Topnav = () => {
     const mylist = ["All", "Skill"]
@@ -39,13 +40,15 @@ const Topnav = () => {
                         </div>
                         <div className="col-2">
                             <ul className='text-white d-flex m-0 p-0 list-unstyled gap-2 justify-content-end'>
-                                <List menuItems={lastmenu} cls="text-white text-decoration-none" myicon="bi bi-cart" />
+                                <List menuItems={lastmenu} cls="text-white text-decoration-none" />
                                 {/* <Iconsetup icon="bi bi-cart fs-4"></Iconsetup> */}
                             </ul>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <Middlenav />
         </>
     )
 }

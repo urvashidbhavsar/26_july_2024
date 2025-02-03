@@ -1,3 +1,9 @@
 .topnav {
     background-color: #232f3e;
 }
+
+.bx-wrapper {
+    box-shadow: none;
+    border: none;
+    background: none;
+}

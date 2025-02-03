@@ -1,7 +1,7 @@
 import React from 'react'
 import Iconsetup from './Iconsetup'
 
-const List = ({ menuItems, cls, myicon }) => {
+const List = ({ menuItems, cls }) => {
     // const mylist = ["All", "Skill"]
     return (
         <>
@@ -9,7 +9,7 @@ const List = ({ menuItems, cls, myicon }) => {
                 menuItems.map(items =>
                     <li key={items}>
                         <a className={cls} href="">
-                            <Iconsetup icon={myicon}></Iconsetup>
+                            {/* <Iconsetup icon={myicon}></Iconsetup> */}
                             {items}</a>
                     </li>
                 )

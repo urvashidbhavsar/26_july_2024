@@ -1,4 +1,6 @@
 import './App.css'
+import Fetchapi from './useeffect/Fetchapi'
+import Timing from './useeffect/Timing'
 import Counter from './usestate/Counter'
 import Employee from './usestate/Employee'
 import Userinput from './usestate/Userinput'
@@ -11,7 +13,9 @@ function App() {
       {/* <Counter /> */}
       {/* <Userinput /> */}
       {/* <Userinput2 /> */}
-      <Employee />
+      {/* <Employee /> */}
+      {/* <Timing /> */}
+      <Fetchapi />
     </>
   )
 }

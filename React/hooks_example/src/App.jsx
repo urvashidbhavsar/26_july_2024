@@ -1,6 +1,10 @@
 import './App.css'
+import Component1 from './usecontext/Component1'
+import Componentcontext from './usecontext/Componentcontext'
 import Fetchapi from './useeffect/Fetchapi'
 import Timing from './useeffect/Timing'
+import RefExample from './useref/RefExample'
+import Videoplay from './useref/Videoplay'
 import Counter from './usestate/Counter'
 import Employee from './usestate/Employee'
 import Userinput from './usestate/Userinput'
@@ -15,7 +19,11 @@ function App() {
       {/* <Userinput2 /> */}
       {/* <Employee /> */}
       {/* <Timing /> */}
-      <Fetchapi />
+      {/* <Fetchapi /> */}
+      {/* <RefExample /> */}
+      {/* <Videoplay /> */}
+      <Component1 />
+      <Componentcontext />
     </>
   )
 }

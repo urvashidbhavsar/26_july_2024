@@ -38,9 +38,7 @@ const Component4 = () => {
     )
 }
 const Component5 = () => {
-    const user = useContext(
-        
-    )
+    const user = useContext(Usercontext)
     return (
         <>
             <h3>Component 5</h3>

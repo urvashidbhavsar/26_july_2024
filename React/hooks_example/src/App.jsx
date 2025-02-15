@@ -1,6 +1,7 @@
 import './App.css'
 import Component1 from './usecontext/Component1'
 import Componentcontext from './usecontext/Componentcontext'
+import Themeset from './usecontext/Themeset'
 import Fetchapi from './useeffect/Fetchapi'
 import Timing from './useeffect/Timing'
 import RefExample from './useref/RefExample'
@@ -22,8 +23,9 @@ function App() {
       {/* <Fetchapi /> */}
       {/* <RefExample /> */}
       {/* <Videoplay /> */}
-      <Component1 />
-      <Componentcontext />
+      {/* <Component1 /> */}
+      {/* <Componentcontext /> */}
+      <Themeset />
     </>
   )
 }

@@ -3,3 +3,13 @@
     width: 100px;
     object-fit: contain;
 }
+
+.lighttheme {
+    background-color: white;
+    color: black;
+}
+
+.darktheme {
+    background-color: black;
+    color: white;
+}

@@ -1,9 +1,13 @@
 import './App.css'
+import Fetchdata from './customhook/Fetchdata'
+import CallbackExample from './usecallback/CallbackExample'
 import Component1 from './usecontext/Component1'
 import Componentcontext from './usecontext/Componentcontext'
 import Themeset from './usecontext/Themeset'
 import Fetchapi from './useeffect/Fetchapi'
 import Timing from './useeffect/Timing'
+import Memoexample from './usememo/Memoexample'
+import ReducerExample from './usereducer/ReducerExample'
 import RefExample from './useref/RefExample'
 import Videoplay from './useref/Videoplay'
 import Counter from './usestate/Counter'
@@ -25,7 +29,11 @@ function App() {
       {/* <Videoplay /> */}
       {/* <Component1 /> */}
       {/* <Componentcontext /> */}
-      <Themeset />
+      {/* <Themeset /> */}
+      {/* <ReducerExample /> */}
+      {/* <Memoexample /> */}
+      {/* <CallbackExample /> */}
+      <Fetchdata />
     </>
   )
 }

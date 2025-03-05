@@ -9,12 +9,24 @@ const Product = () => {
         brand: "",
         des: "",
         oldprice: "",
+        rate: "",
         newprice: "",
         image: ""
     })
 
     const handleChange = (e) => {
-        setInput({ ...input, [e.target.name]: e.target.value })
+        const changedata = { ...input, [e.target.name]: e.target.value }
+
+        if (e.target.name === "oldprice" || e.target.name === "rate") {
+            let price = parseFloat(changedata.oldprice);
+            let rate = parseFloat(changedata.rate);
+            if (price > 0 && rate > 0) {
+                changedata.newprice = Math.round((price - ((price * rate) / 100)))
+            } else {
+                changedata.newprice = ""
+            }
+        }
+        setInput(changedata)
     }
 
     const handleSubmit = (e) => {
@@ -30,6 +42,7 @@ const Product = () => {
             brand: "",
             des: "",
             oldprice: "",
+            rate: "",
             newprice: "",
             image: ""
         })
@@ -54,11 +67,14 @@ const Product = () => {
                         <div className="col-6">
                             <input type="text" name="des" placeholder='Product Description' className='form-control' required onChange={handleChange} value={input.des} />
                         </div>
-                        <div className="col-6">
+                        <div className="col-5">
                             <input type="number" name="oldprice" placeholder='Old Price' className='form-control' required onChange={handleChange} value={input.oldprice} />
                         </div>
-                        <div className="col-6">
-                            <input type="number" name="newprice" placeholder='New Price' className='form-control' required onChange={handleChange} value={input.newprice} />
+                        <div className="col-2">
+                            <input type="number" name="rate" placeholder='Rate(%)' className='form-control' required onChange={handleChange} value={input.rate} />
+                        </div>
+                        <div className="col-5">
+                            <input type="number" name="newprice" placeholder='New Price' className='form-control' required onChange={handleChange} value={input.newprice} readOnly />
                         </div>
                         <div className="col-12">
                             <input type="text" name="image" placeholder='Image URL' className='form-control' required onChange={handleChange} value={input.image} />

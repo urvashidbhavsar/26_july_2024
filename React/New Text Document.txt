@@ -1,0 +1,22 @@
+{
+    "employee": [
+        {
+            "id": 1,
+            "empname": "Rohit",
+            "city":"Surat",
+            "mobileno":9898989898,
+            "designation": "Manager",
+            "salary": 70000,
+            "profile": "https://png.pngtree.com/png-clipart/20231019/original/pngtree-user-profile-avatar-png-image_13369988.png"
+        },
+        {
+            "id": 2,
+            "empname": "Jinal",
+            "city":"Navsari",
+            "mobileno":6589658965,
+            "designation": "Software Develper",
+            "salary": 40000,
+            "profile": "https://cdni.iconscout.com/illustration/premium/thumb/woman-profile-8187680-6590622.png?f=webp"
+        }
+    ]
+}

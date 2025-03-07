@@ -1,0 +1,7 @@
+=> install json file globally
+npm install -g json-server
+
+for run json file => json-server --watch ./src/json/employee.json
+
+api : http://localhost:3000/employee
+

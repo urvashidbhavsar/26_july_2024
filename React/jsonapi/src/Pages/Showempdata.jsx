@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Addempdata from './Addempdata'
+import UpdateData from './UpdateData'
 
 const Showempdata = () => {
     const [getdata, setGetdata] = useState([])
+    const [updatedata, setUpdatedata] = useState({})
 
     const fetchdata = () => {
         fetch("http://localhost:3000/employee")
@@ -20,6 +22,19 @@ const Showempdata = () => {
         fetchdata()
     }, [])
 
+    const deleteData = (id) => {
+        if (confirm("Are you sure want to delete this data?")) {
+            fetch(`http://localhost:3000/employee/${id}`, {
+                method: "DELETE",
+            })
+            fetchdata()
+        }
+    }
+
+    const updateEmpdata = (items) => {
+        setUpdatedata(items)
+    }
+
     return (
         <>
             <Addempdata fetchdata={fetchdata} />
@@ -36,6 +51,7 @@ const Showempdata = () => {
                             <th>Designation</th>
                             <th>Salary</th>
                             <th>Profile</th>
+                            <th colSpan={2}>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,12 +67,20 @@ const Showempdata = () => {
                                     <td>
                                         <img src={items.profile} style={imgset} />
                                     </td>
+                                    <td>
+                                        <button className='btn btn-primary' data-bs-toggle="modal" data-bs-target="#update_data" onClick={() => updateEmpdata(items)}>Edit</button>
+                                    </td>
+                                    <td>
+                                        <button className='btn btn-danger' onClick={() => deleteData(items.id)}>Delete</button>
+                                    </td>
                                 </tr>
                             )
                         }
                     </tbody>
                 </table>
             </div>
+
+            <UpdateData update={updatedata} setUpdate={setUpdatedata} refreshdata={fetchdata} />
         </>
     )
 }

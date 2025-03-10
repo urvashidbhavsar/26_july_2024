@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
+import Lists from '../components/Lists'
 
 const Addempdata = ({ fetchdata }) => {
-    const city = ["Surat", "Navsari", "Baroda", "Vapi", "Bharuch", "Ankleshwar"];
-
-    const des = ["Manager", "Software Developer", "Worker", "Employee", "Peon"]
-
+    const { des, city } = Lists()
     const [input, setInput] = useState({
         id: "",
         empname: "",

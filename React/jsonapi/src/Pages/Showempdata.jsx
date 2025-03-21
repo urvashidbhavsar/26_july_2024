@@ -14,6 +14,8 @@ const Showempdata = () => {
     // create state for filterdata after select as per designation
     const [filterdata, setFilterdata] = useState([])
     const [desig, setDesig] = useState("")
+    // for checkbox
+    const [isDesigEnabled, setIsDesigEnabled] = useState(false)
 
     const fetchdata = () => {
         fetch("http://localhost:3000/employee")
@@ -68,13 +70,26 @@ const Showempdata = () => {
             <div className="container py-2">
                 <h3 className='bg-success p-2 text-white'>Show Data</h3>
 
-                <div className='row'>
+                <div className='row align-items-center'>
                     <div className='col-4'>
-                        <input type="checkbox" className='form-check-input' />
-                        <label htmlFor=""> Search by Designation</label>
+                        <input
+                            type="checkbox"
+                            className='form-check-input'
+                            onChange={() => setIsDesigEnabled(!isDesigEnabled)}
+                        />
+                        <label htmlFor="" className="ms-2">Search by Designation</label>
                     </div>
                     <div className="col-8">
-                        <select name="desig" id="desig" className='form-select' onChange={(e) => setDesig(e.target.value)} value={desig}>
+                        <select
+                            name="desig"
+                            id="desig"
+                            className='form-select'
+                            onChange={(e) => setDesig(e.target.value)}
+                            value={desig}
+                            // Disable dropdown if checkbox is not checked
+                            disabled={!isDesigEnabled}
+                        >
+                            <option value="">Select Designation</option>
                             {
                                 des.map(item =>
                                     <option key={item} value={item}>{item}</option>

@@ -1,5 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+// import for authentication
+import { getAuth } from "firebase/auth";
+import { alignPropType } from "react-bootstrap/esm/types";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBObDSxF8xIFV06c3ybFVh4t3O-3eg-Vpc",
@@ -13,6 +16,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+export const db = getFirestore(app);
+export const auth = getAuth();
 
-export default db;
+// export default db;
+export default app;

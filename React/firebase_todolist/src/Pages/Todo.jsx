@@ -59,8 +59,7 @@ const Todo = () => {
                                                 items.title
                                         }
                                     </div>
-                                    <div className="col-3">
-
+                                    <div className="col-6">
                                         {
                                             isEdit === items.id ?
                                                 <Button variant='primary' className='mx-1' onClick={() => handlesave(items.id)}>Update</Button>

@@ -5,11 +5,30 @@ import Form from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom'
 import { auth, db } from '../firebase'
 import { setDoc, doc } from 'firebase/firestore'
+import { fnamereg, emailreg } from '../reg'
 
 const Register = () => {
     const [fullname, setFullname] = useState("");
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+
+    const [fnameErr, setFnameerr] = useState(false)
+    const [EmailErr, setEmailerr] = useState(false)
+
+    const renderErrName = () => {
+        if (fnamereg.test(fullname)) {
+            setFnameerr(false)
+        } else {
+            setFnameerr(true)
+        }
+    }
+    const renderErrEmail = () => {
+        if (emailreg.test(email)) {
+            setEmailerr(false)
+        } else {
+            setEmailerr(true)
+        }
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -40,11 +59,13 @@ const Register = () => {
                     <Form onSubmit={handleSubmit}>
                         <Form.Group className="mb-3">
                             <Form.Label>Full Name</Form.Label>
-                            <Form.Control type="text" placeholder="Full name" value={fullname} onChange={(e) => setFullname(e.target.value)} />
+                            <Form.Control type="text" placeholder="Full name" value={fullname} onChange={(e) => setFullname(e.target.value)} onKeyUp={renderErrName} required />
+                            {fnameErr && <div className='text-danger'>Invalid name</div>}
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Email</Form.Label>
-                            <Form.Control type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <Form.Control type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} onKeyUp={renderErrEmail} />
+                            {EmailErr && <div className='text-danger'>Invalid Email</div>}
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Password</Form.Label>

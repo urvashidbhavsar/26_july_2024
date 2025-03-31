@@ -30,10 +30,10 @@ function App() {
       {/* <Component1 /> */}
       {/* <Componentcontext /> */}
       {/* <Themeset /> */}
-      {/* <ReducerExample /> */}
+      <ReducerExample />
       {/* <Memoexample /> */}
       {/* <CallbackExample /> */}
-      <Fetchdata />
+      {/* <Fetchdata /> */}
     </>
   )
 }

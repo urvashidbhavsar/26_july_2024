@@ -3,7 +3,7 @@ import todoSlice from '../logic/todoSlice'
 
 const mystore = configureStore({
     reducer: {
-        todos: todoSlice,
+        alltodos: todoSlice,
     }
 })
 

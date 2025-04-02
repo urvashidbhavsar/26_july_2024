@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { addtodo } from '../logic/todoSlice'
 import { useDispatch } from 'react-redux'
+import Showdata from './Showdata'
 
 const TodoList = () => {
     const dispatch = useDispatch()
@@ -25,6 +26,8 @@ const TodoList = () => {
                     </div>
                 </div>
             </div>
+
+            <Showdata />
         </>
     )
 }
